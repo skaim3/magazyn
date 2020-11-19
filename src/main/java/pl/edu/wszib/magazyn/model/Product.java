@@ -3,35 +3,38 @@ package pl.edu.wszib.magazyn.model;
 public class Product {
     private String name;
     private String code;
-    private int amount;
+    private int quantity;
 
-    public Product(String name, int amount, String code) {
+    public Product(String name, String code, int quantity) {
         this.name = name;
-        this.amount = amount;
         this.code = code;
+        this.quantity = quantity;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getAmount() {
-        return amount;
-    }
-
     public String getCode() {
         return code;
+    }
+    public int getQuantity() {
+        return quantity;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
     public void setCode(String code) {
         this.code = code;
+    }
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "name='" + name + '\'' + ", code='" + code + '\'' + ", quantity=" + quantity + '}';
     }
 }
