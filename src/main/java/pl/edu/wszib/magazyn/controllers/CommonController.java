@@ -39,4 +39,9 @@ public class CommonController {
         model.addAttribute("isLogged", this.sessionObject.isLogged());
         return "contact";
     }
+    @RequestMapping(value = "/addProduct", method = RequestMethod.GET)
+    public String addProduct(Model model){
+        model.addAttribute("isLogged", this.sessionObject.isLogged());
+        return "addProduct";
+    }
 }

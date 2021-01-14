@@ -7,4 +7,6 @@ public interface IProductDAO {
     Product getProductById(int id);
     void updateProduct(Product product);
     List<Product> getAllProducts();
+    //boolean addProduct(Product product);
+    //TODO dorobić dodawanie produktu
 }

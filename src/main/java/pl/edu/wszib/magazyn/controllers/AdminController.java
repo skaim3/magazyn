@@ -45,4 +45,6 @@ public class AdminController {
 
         return "redirect:/main";
     }
+
+   //TODO Dorobić dodawanie produktu
 }

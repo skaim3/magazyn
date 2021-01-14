@@ -56,6 +56,26 @@ public class ProductDAOImpl implements IProductDAO {
         }
     }
 
+    /*
+    @Override
+    public boolean addProduct(Product product){
+        String sql = "INSERT INTO tproduct (name, code, quantity) VALUES (?, ?, ?)";
+        try {
+            PreparedStatement preparedStatement = this.connection.prepareStatement(sql);
+            preparedStatement.setString(1, product.getName());
+            preparedStatement.setString(2, product.getCode());
+            preparedStatement.setInt(3, product.getQuantity());
+
+            preparedStatement.executeUpdate();
+            return true;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+            return false;
+        }
+    }
+     */
+//TODO Dorobić dodawanie produktu
+
     @Override
     public List<Product> getAllProducts() {
         List<Product> products = new ArrayList<>();

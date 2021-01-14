@@ -2,14 +2,15 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Skier's warehouse</title>
 </head>
 <body>
 <div id="menu" th:fragment="menu">
-    <a href="/main" class="menu-button">Strona Główna</a>
-    <a href="/contact" class="menu-button">Kontakt</a>
-    <a href="/logout" class="menu-button" th:if="${isLogged}">Wyloguj</a>
-    <a href="/login" class="menu-button" th:if="${!isLogged}">Zaloguj</a>
+    <a href="/main" class="menu-button">Storage</a>
+    <a href="/contact" class="menu-button">Contact</a>
+    <a th:if="${role == 'ADMIN'}" href="/addProduct" class="menu-button">Add Product</a>
+    <a href="/logout" class="menu-button" th:if="${isLogged}">Log out</a>
+    <a href="/login" class="menu-button" th:if="${!isLogged}">Log in</a>
 </div>
 
 <img src="/logo.png" id="logo" th:fragment="logo">

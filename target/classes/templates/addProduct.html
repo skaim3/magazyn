@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Skier's warehouse</title>
-    <link rel="stylesheet" href="/commons.css">
     <link rel="stylesheet" href="/edit.css">
+    <link rel="stylesheet" href="/commons.css">
 </head>
 <body>
 <div th:replace="fragments.html :: logo"></div>
 <div th:replace="fragments.html :: menu"></div>
 <div id="content">
     <form method="post" id="edit-form">
-        <input type="text" th:field="*{product.name}">
-        <input type="text" th:field="*{product.code}">
-        <input type="text" th:field="*{product.quantity}">
-        <input type="submit" value="Edit">
+        <input type="text" placeholder="Product Name">
+        <input type="text" placeholder="Product Code">
+        <input type="text" placeholder="Quantity">
+        <input type="submit" value="Add">
     </form>
 </div>
-
-
 </body>
 </html>

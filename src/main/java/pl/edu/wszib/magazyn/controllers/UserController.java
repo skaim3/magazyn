@@ -64,14 +64,14 @@ public class UserController {
         Matcher pass2Matcher = regexp.matcher(registrationModel.getPass2());
 
         if(!loginMatcher.matches() || !passMatcher.matches() || !pass2Matcher.matches() || !registrationModel.getPass().equals(registrationModel.getPass2())) {
-            this.sessionObject.setInfo("validation error !!");
+            this.sessionObject.setInfo("validation error!");
             return "redirect:/register";
         }
 
         if(this.userService.register(registrationModel)) {
             return "redirect:/login";
         } else {
-            this.sessionObject.setInfo("login zajęty !!");
+            this.sessionObject.setInfo("Login is taken!");
             return "redirect:/register";
         }
     }
