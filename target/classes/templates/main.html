@@ -12,8 +12,8 @@
 <div id="content">
 <th:block th:each="product : ${products}">
     <div class="product-box">
-        <div th:text="${product.name}" class="name-box"></div>
-        <div th:text="${product.code}" class="code-box"></div>
+        <div th:text="'Name: ' + ${product.name}" class="name-box"></div>
+        <div th:text="'Product code: ' + ${product.code}" class="code-box"></div>
         <div class="product-data-box">
             <div th:text="'Quantity: ' + ${product.quantity}"></div>
             <a th:if="${role == 'ADMIN'}" th:href="@{/edit/{id}(id=${product.id})}" class="edit-button"></a>
